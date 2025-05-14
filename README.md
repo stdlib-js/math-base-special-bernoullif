@@ -37,16 +37,36 @@ limitations under the License.
 
 <section class="intro">
 
+</section>
+
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-bernoullif
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@deno/mod.js';
+var bernoullif = require( '@stdlib/math-base-special-bernoullif' );
 ```
 
 #### bernoullif( n )
@@ -76,7 +96,7 @@ v = bernoullif( 20 );
 // returns ~-529.124
 ```
 
-For even integers `n >= 66`, the function alternates between returning positive and negative infinity, as larger [Bernoulli numbers][bernoulli-number] cannot be safely represented in [single-precision floating-point format][ieee754]
+For even integers `n >= 66`, the function alternates between returning positive and negative infinity, as larger [Bernoulli numbers][bernoulli-number] cannot be safely represented in [single-precision floating-point format][ieee754].
 
 ```javascript
 var v = bernoullif( 66 );
@@ -123,9 +143,9 @@ var v = bernoullif( NaN );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@deno/mod.js';
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var bernoullif = require( '@stdlib/math-base-special-bernoullif' );
 
 var x = discreteUniform( 100, 0, 70, {
     'dtype': 'int32'
@@ -140,7 +160,91 @@ logEachMap( 'bernoullif(%d) = %0.4f', x, bernoullif );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/bernoullif.h"
+```
+
+#### stdlib_base_bernoullif( n )
+
+Computes the nth [Bernoulli number][bernoulli-number] as a single-precision floating-point number.
+
+```c
+float out = stdlib_base_bernoullif( 0 );
+// returns 1.0f
+
+out = stdlib_base_bernoullif( 1 );
+// returns 0.5f
+```
+
+The function accepts the following arguments:
+
+-   **n**: `[in] int32_t` input value.
+
+```c
+float stdlib_base_bernoullif( const int32_t n );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/bernoullif.h"
+#include <stdio.h>
+#include <stdint.h>
+
+int main( void ) {
+    int32_t i;
+    float v;
+
+    for ( i = 0; i < 70; i++ ) {
+        v = stdlib_base_bernoullif( i );
+        printf( "bernoullif(%d) = %f\n", i, v );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -159,7 +263,7 @@ logEachMap( 'bernoullif(%d) = %0.4f', x, bernoullif );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
