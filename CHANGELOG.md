@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-27)
+## Unreleased (2025-11-06)
 
 <section class="features">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`d7012a5`](https://github.com/stdlib-js/stdlib/commit/d7012a5869b94b4b1d8650fdb65cb08546bdeae9) - **chore:** add structured package data for `math/base/special/bernoullif` [(#8406)](https://github.com/stdlib-js/stdlib/pull/8406) _(by Manvith M, Athan Reines)_
 -   [`81f904d`](https://github.com/stdlib-js/stdlib/commit/81f904da25808197e2ae83ebf9c8b26860855e7c) - **bench:** fix failing C benchmarks by using `round` and `roundf` [(#7980)](https://github.com/stdlib-js/stdlib/pull/7980) _(by Gunj Joshi)_
 -   [`59f0fbb`](https://github.com/stdlib-js/stdlib/commit/59f0fbbf7f8d36265950fcedc893f66d4691157f) - **refactor:** modify C implementation to accept `float` instead of `int32` in `math/base/special/bernoullif` [(#7941)](https://github.com/stdlib-js/stdlib/pull/7941) _(by Gunj Joshi, Athan Reines)_
 -   [`97ab65f`](https://github.com/stdlib-js/stdlib/commit/97ab65f9a65c9f1510f21309ff4892c752910e0f) - **docs:** fix missing closing section _(by Athan Reines)_
@@ -49,12 +50,13 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gunj Joshi
 -   Gururaj Gurram
 -   Karan Anand
+-   Manvith M
 -   Philipp Burckhardt
 
 </section>
