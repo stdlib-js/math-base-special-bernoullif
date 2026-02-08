@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@esm/index.mjs';
+import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@v0.1.1-esm/index.mjs';
 ```
 
 #### bernoullif( n )
@@ -132,7 +132,7 @@ var v = bernoullif( NaN );
 
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@esm/index.mjs';
+import bernoullif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-bernoullif@v0.1.1-esm/index.mjs';
 
 var x = discreteUniform( 100, 0, 70, {
     'dtype': 'int32'
